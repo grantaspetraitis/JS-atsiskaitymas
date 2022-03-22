@@ -10,3 +10,32 @@ bent minimalų stilių;
 -------------------------------------------------------------------------- */
 
 const ENDPOINT = 'cars.json';
+
+let outputas = document.querySelector("#output");
+
+window.addEventListener("load", render);
+
+async function gautiDuomenis(){
+    try {
+        let response = await fetch(ENDPOINT);
+        let result = await response.json();
+        return result;
+    }
+    catch (error){
+        console.log(error);
+    }
+}
+
+async function render(){
+    let cars = await gautiDuomenis();
+    for(i = 0; i < cars.length; i++){
+        outputas.innerHTML += `
+        <h1 id="heading">Gamintojas: ${cars[i].brand}</h1>
+        `;
+        const modeliuMasyvas = cars[i].models;
+        const modeliai = modeliuMasyvas.join(", ");
+        outputas.innerHTML += `
+        <p class="paragrafas">Modeliai: ${modeliai}</p>
+        `;
+    }
+}

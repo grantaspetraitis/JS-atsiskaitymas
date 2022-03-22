@@ -27,3 +27,17 @@
   margin-top: 50px;
   color: #333;
 }
+
+#heading {
+  color:rgb(173, 0, 0);
+  margin-left: 20%;
+}
+
+.paragrafas {
+  color: rgb(4, 0, 128);
+  margin-left: 10%;
+  margin-right: 10%;
+  border: black 1px solid;
+  padding: 20px;
+  box-shadow: #333 5px 5px;
+}
