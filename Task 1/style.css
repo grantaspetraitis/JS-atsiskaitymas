@@ -29,7 +29,7 @@ form {
   flex-wrap: wrap;
 }
 
-#search {
+#input {
   width: 65%;
   margin: 0;
   padding: 20px;
@@ -62,4 +62,16 @@ form {
   #submit-btn {
     font-size: 2em;
   }
+}
+
+#output {
+  position: relative;
+  left: 30%;
+  font-size: 2em;
+  border: black 2px solid;
+  padding: 20px;
+}
+
+.nerodyti {
+  display: none;
 }
