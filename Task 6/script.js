@@ -19,3 +19,28 @@ const users = [
   { id: '8', name: 'Simon Peterson', age: 30 },
   { id: '9', name: 'Daniel Cane', age: 51 },
 ];
+
+const varduMasyvas = [];
+
+function getUserAverageAge(mas){
+  let sum = 0;
+  let avg;
+  for(i = 0; i < mas.length; i++){
+    sum += users[i].age;
+  }
+
+  avg = sum / mas.length;
+  return avg;
+}
+
+function getUsersNames(mas){
+  for(i = 0; i < mas.length; i++){
+    varduMasyvas.push(mas[i].name);
+  }
+  return varduMasyvas;
+}
+
+
+console.log(getUserAverageAge(users));
+console.log(getUsersNames(users));
+
