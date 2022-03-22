@@ -19,3 +19,27 @@ const users = [
   { id: '8', name: 'Simon Peterson', age: 30, hasDog: false },
   { id: '9', name: 'Daniel Cane', age: 51, hasDog: true },
 ];
+
+const atsakymoMasyvas = [];
+const atsakymoMasyvas2 = [];
+
+function filterDogOwners(mas){
+  for(i = 0; i < mas.length; i++){
+    if(mas[i].hasDog){
+      atsakymoMasyvas.push(` ${mas[i].name}`);
+    }
+  }
+  return `Šie žmonės turi šunį: ${atsakymoMasyvas}`
+}
+
+function filterAdults(mas){
+  for(i = 0; i < mas.length; i++){
+    if(mas[i].age >= 18){
+      atsakymoMasyvas2.push(` ${mas[i].name}`);
+    }
+  }
+  return `Šie žmonės yra pilnamečiai: ${atsakymoMasyvas2}`;
+}
+
+console.log(filterDogOwners(users));
+console.log(filterAdults(users));
