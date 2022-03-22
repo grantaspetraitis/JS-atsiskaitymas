@@ -59,3 +59,13 @@
   border-radius: 5px;
   background-color: #fff;
 }
+
+.nerodyti {
+  display: none;
+}
+
+.kortele {
+  border: black 2px solid;
+  margin: 10px;
+  box-shadow: #474747 5px 5px;
+}
